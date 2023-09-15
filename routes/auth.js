@@ -9,16 +9,14 @@ const jwt = require('jsonwebtoken');   //using jwt(JSON web token for authorizat
 const secret_key="Mynameissujal"  //secret key 
 
 
-//  ROUTE-1---->Creating a new user (no login required)
+
 router.post('/createUser', [
   body('name', 'The name must be of atleast 3 characters').isLength({ min: 3 }),
   body('email', 'Enter a valid email ').isEmail(),
   body('password', 'The password must be of atleast 6 characters').isLength({ min: 6 }),
 ], async (req, res) => {
   console.log(req.body);
-  // const user=new User(req.body)
-  // user.save()
-  // res.send(`Hi,this is ${req.body.name}`)
+  
 
   let success=false;
 

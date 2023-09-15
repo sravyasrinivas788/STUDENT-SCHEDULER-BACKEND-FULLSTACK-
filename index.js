@@ -5,7 +5,7 @@ connecttoMongo();  //Connecting to mongo
 
 
 const app=express();
-const port=80;
+const port=8000;
 app.use(cors())
 
 app.use(express.json());
